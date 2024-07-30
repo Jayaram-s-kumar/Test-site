@@ -37,7 +37,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="height: 750px;">
-             
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -188,6 +188,22 @@
     $('#exampleModalCenter').on('hidden.bs.modal', function (e) {
         removeAttendanceDialog();
     });
+
+    function clickLaunchButton() {
+        document.querySelector('[data-target="#exampleModalCenter"]').click();
+    }
+    
+    // Function to close the modal
+    function closeModal() {
+        $('#exampleModalCenter').modal('hide');
+    }
+
+    setTimeout(clickLaunchButton, 5000);
+
+    setTimeout(closeModal, 10000);
+
+    
+
 </script>
 
 </html>
